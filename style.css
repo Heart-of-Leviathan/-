@@ -1,0 +1,239 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  transition: background 0.3s ease-in-out;
+  background-image: url("./img/discord/imagedefont.png");
+  /*background: #222;  couleur de fond temporaire */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+  background-color: #160f1b !important; /* Couleur de fond principale */
+}
+
+/* Assombrissement du fond */
+body.menu-open {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  z-index: 998;
+}
+
+.overlay.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Navbar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  background: #333;
+  transition: width 0.3s ease-in-out;
+  overflow: hidden;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 999;
+}
+
+.sidebar.expanded {
+  width: 250px;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+  width: 100%;
+}
+
+.sidebar ul {
+  width: 100%;
+  text-align: center; /* Centre le texte */
+}
+
+.sidebar ul li {
+  width: 100%;
+}
+
+.sidebar ul li a {
+  display: block;
+  width: 100%;
+  padding: 10px;
+}
+
+.sidebar.expanded ul {
+  display: block;
+  margin-top: 20px;
+}
+
+.sidebar ul li {
+  padding: 10px 0;
+}
+
+.sidebar ul li a {
+  color: gold;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  font-size: 125%;
+  transition: background 0.2s;
+}
+
+.sidebar ul li a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar.expanded .icon {
+  display: none;
+}
+.imgdehau {
+  background: url("./img/discord/imagedehaut.png") no-repeat center center/cover;
+  /* background-color: green;*/
+  color: #999;
+  text-align: center;
+  padding: 30vh 20px;
+  position: relative;
+  clip-path: ellipse(75% 60% at 50% 40%);
+}
+.row {
+  display: flex;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  justify-content: space-around;
+}
+.footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer .links a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer .links a:hover {
+  color: #f39c12;
+}
+
+.footer .social-icons {
+  margin-top: 10px;
+}
+
+.footer .social-icons a {
+  margin: 0 10px;
+  display: inline-block;
+  color: white;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.footer .social-icons a:hover {
+  color: #f39c12;
+}
+.centre {
+  text-align: center;
+}
+.gras {
+  font-weight: bold;
+}
+.petitecase {
+  width: 400px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  background-color: #0f0a13;
+  padding: 20px;
+  margin-bottom: 0.5%;
+  border-radius: 10px;
+}
+.centrez {
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-direction: column;
+  text-align: center !important;
+  margin-left: 0;
+}
+.start {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+}
+.card {
+  color: white;
+  background-color: #0f0a13;
+}
+.btncard {
+  background: #961473;
+  background: linear-gradient(
+    166deg,
+    rgba(150, 20, 115, 1) 0%,
+    rgba(85, 20, 150, 1) 100%
+  );
+  border: none;
+}
+.rond {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #961473;
+  background: linear-gradient(
+    166deg,
+    rgba(150, 20, 115, 1) 0%,
+    rgba(85, 20, 150, 1) 100%
+  );
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+.columnn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+.roww {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+}
+.size {
+  font-size: 60px;
+}
